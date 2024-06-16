@@ -1,0 +1,30 @@
+{
+    "chain_name": "Initia-testnet",
+  "api": ["https://lcd.initiation-1.initia.xyz", "https://api.initia.idekubagus.com"],
+  "rpc": ["https://rpc.initiation-1.initia.xyz", "https://rpc.initia.idekubagus.com"],
+    "sdk_version": "0.46.11",
+    "snapshot_provider": "",
+    "coin_type": "118",
+    "min_tx_fee": "6000",
+    "addr_prefix": "init",
+    "logo": "/logos/INIT-black[1].svg",
+    "theme_color": "#007CB2",
+    "assets": [{
+        "base": "uinit",
+        "symbol": "INIT",
+        "exponent": "6",
+        "logo": "/logos/INIT-black[1].svg"
+    },{
+        "base": "USDC",
+        "symbol": "USDC",
+        "exponent": "6",
+        "coingecko_id": "USDC", 
+        "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/USDC.svg"
+    },{
+        "base": "move/dbf06c48af3984ec6d9ae8a9aa7dbb0bb1e784aa9b8c4a5681af660cf8558d7d",
+        "symbol": "USDC-INIT LP",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/USDC-INIT.svg"
+    }]
+}
