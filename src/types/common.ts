@@ -22,7 +22,7 @@ export class PageRequest {
     reverse?: boolean;
     constructor() {
         this.limit = 20
-        this.count_total = true
+        this.count_total = false
     }
     toQueryString() {
         const query = []

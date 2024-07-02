@@ -29,10 +29,11 @@ export const useGovStore = defineStore('govStore', {
     initial() {
       this.$reset();
       this.fetchParams();
-      this.fetchProposals('2');
+      this.fetchProposals('0');
     },
     async fetchProposals(status: string, pagination?: PageRequest) {
       //if (!this.loading[status]) {
+        
       this.loading[status] = LoadingStatus.Loading;
       const proposals = reactive(
         await this.blockchain.rpc?.getGovProposals(status, pagination)
@@ -46,7 +47,7 @@ export const useGovStore = defineStore('govStore', {
         });
       }
 
-      if (status === '2') {
+      if (status === '0') {
         proposals?.proposals?.forEach((item) => {
           this.fetchTally(item.proposal_id).then((res) => {
             item.final_tally_result = res?.tally;
