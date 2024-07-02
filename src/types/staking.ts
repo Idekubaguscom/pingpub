@@ -19,7 +19,8 @@ export interface Validator {
     "commission": CommissionRate,
     "min_self_delegation": string,
     "liquid_shares": string,
-    "validator_bond_shares": string
+    "validator_bond_shares": string,
+    "voting_power": string
 }
 
 export interface CommissionRate {
@@ -66,6 +67,7 @@ export interface StakingParam {
         "min_self_delegation": string
     }
 }
+
 
 export interface StakingPool {
     pool: {

@@ -1,8 +1,8 @@
 {
-    "chain_name": "Initia-testnet",
+    "chain_name": "initia",
   "api": ["https://lcd.initiation-1.initia.xyz", "https://api.initia.idekubagus.com"],
   "rpc": ["https://rpc.initiation-1.initia.xyz", "https://rpc.initia.idekubagus.com"],
-    "sdk_version": "0.46.11",
+    "sdk_version": "0.47.0",
     "snapshot_provider": "",
     "coin_type": "118",
     "min_tx_fee": "6000",

@@ -1,0 +1,18 @@
+{
+    "chain_name": "0G-testnet",
+  "api": ["https://api.0g.idekubagus.com", "https://testnet.zero-g.api.service.nodebrand.xyz"],
+  "rpc": ["https://og-rpc.idekubagus.com", "https://testnet.zero-g.rpc.service.nodebrand.xyz"],
+    "sdk_version": "0.45.0",
+    "snapshot_provider": "",
+    "coin_type": "118",
+    "min_tx_fee": "6000",
+    "addr_prefix": "0g",
+    "logo": "/logos/zg.svg",
+    "theme_color": "#E66AB0",
+    "assets": [{
+        "base": "ua0gi",
+        "symbol": "A0GI",
+        "exponent": "6",
+        "logo": "/logos/zg.svg"
+    }]
+}
