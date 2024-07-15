@@ -74,11 +74,11 @@ function confirm() {
     <!-- modal -->
     <div
       v-if="searchModalShow"
-      class="cursor-pointer modal !pointer-events-auto !opacity-100 !visible"
+      class=" cursor-pointer modal !pointer-events-auto !opacity-100 !visible"
       @click="closeSearchModal"
     >
       <div
-        class="relative modal-box cursor-default"
+        class="relative modal-box cursor-default border border-gray-400 dark:border-gray-400 bg-base-200"
         @click="(event) => preventClick(event)"
       >
         <!-- header -->
@@ -120,7 +120,7 @@ function confirm() {
         </div>
         <!-- foot -->
         <div class="mt-6">
-          <button class="w-full btn btn-primary" @click="confirm">
+          <button class="w-full btn btn glass" @click="confirm">
             Confirm
           </button>
         </div>

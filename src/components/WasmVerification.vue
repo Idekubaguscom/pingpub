@@ -183,10 +183,10 @@ function callFunction(title: string, method: string, arg: Argument) {
 
 </script>
 <template>
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="bg-base-200 px-4 pt-3 pb-4 rounded-md mb-4 shadow">
         <div role="tablist" class="tabs tabs-boxed">
           <a role="tab" class="tab tooltip tooltip-right tooltip-success" data-tip="Powered By WELLDONE Studio">
-            <div class="w-8 rounded">
+            <div class="w-8 rounded-md">
               <img src="../assets/images/welldone-logo.svg"  alt="Powered By WELLDONE Studio"/>
             </div>
           </a>
@@ -236,12 +236,12 @@ function callFunction(title: string, method: string, arg: Argument) {
             <div v-if="Object.keys(verification).length == 0" >
                Haven't found verification
             </div>
-            <button class="btn btn-primary mt-5" @click="verify" v-show="tab === 'verification'" :disabled="verification.error !== undefined">verify</button>
+            <button class="btn btn glass mt-5" @click="verify" v-show="tab === 'verification'" :disabled="verification.error !== undefined">verify</button>
         </div>
 
         <!-- alert-info -->
         <div
-          class="text-[#00cfe8] bg-[rgba(0,207,232,0.12)] rounded shadow mt-4 alert-info"
+          class="text-[#00cfe8] bg-[rgba(0,207,232,0.12)] rounded-md shadow mt-4 alert-info"
         >
           <div
             class="drop-shadow-md px-4 pt-2 pb-2"

@@ -188,11 +188,11 @@ function fetchAllKeyRotation() {
         <a class="tab text-gray-400 capitalize">{{ $t('uptime.customize') }}</a>
       </RouterLink>
     </div>
-    <div class="bg-base-100 px-5 pt-5">
+    <div class="primary border border-gray-400 dark:border-gray-400 px-5 pt-5 rounded-md">
       <div class="flex items-center gap-x-4">
         <input type="text" v-model="keyword" placeholder="Keywords to filter validators"
           class="input input-sm w-full flex-1 border border-gray-200 dark:border-gray-600" />
-        <button v-if="chainStore.isConsumerChain" class="btn btn-sm btn-primary" @click="fetchAllKeyRotation">Load
+        <button v-if="chainStore.isConsumerChain" class="btn btn-sm btn glass" @click="fetchAllKeyRotation">Load
           Rotated Keys</button>
       </div>
 

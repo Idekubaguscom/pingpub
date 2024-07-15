@@ -38,9 +38,9 @@ const chainStore = useBlockchain()
 
 </script>
 <template>
-  <div class="">
+  <div class="primary">
     <div class="flex md:!flex-row flex-col items-center justify-center mb-6 mt-14 gap-2">
-      <div class="w-16 rounded-full">
+      <div class="w-16 rounded-md">
         <svg version="1.0" xmlns="http://www.w3.org/2000/svg" 
           viewBox="0 0 150.000000 132.000000"
           preserveAspectRatio="xMidYMid meet">
@@ -97,7 +97,7 @@ const chainStore = useBlockchain()
       <h2 class="mb-6">{{ $t('pages.description') }}</h2>
     </div>
 
-    <div class="flex items-center rounded-lg bg-base-100  border border-gray-200 dark:border-gray-700 mt-10">
+    <div class="flex items-center rounded-md primary border border-gray-400 dark:border-gray-400 mt-10">
       <Icon icon="mdi:magnify" class="text-2xl text-gray-400 ml-3"/>
       <input :placeholder="$t('pages.search_placeholder')" class="px-4 h-10 bg-transparent flex-1 outline-none text-base" v-model="keywords" />
       <div class="px-4 text-base hidden md:!block">{{ chains.length }}/{{ dashboard.length }}</div>
@@ -117,6 +117,6 @@ const chainStore = useBlockchain()
 
 <style scoped>
  .logo path{
-  fill: #171d30;
+  fill: #6d7285;
 }
 </style>@/components/ad/ad

@@ -43,13 +43,13 @@ function gotoHistory() {
 }
 </script>
 <template>
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="primary border border-gray-400 dark:border-gray-400 px-4 pt-3 pb-4 rounded-md mb-4 shadow">
         <h2 class="card-title truncate w-full mb-4">{{ $t('cosmwasm.title') }}</h2>
         <div class="grid grid-flow-col auto-cols-max gap-4 overflow-hidden">
             <div class="join w-full border border-primary">
                 <select v-model="field" class="select select-primary"><option value="contract">Contract</option><option value="creator">Creator</option></select>
                 <input v-model="creator" type=text class="input input-bordered w-full join-item" placeholder="address" />
-                <button class="join-item btn  btn-primary" @click="myContracts()">{{ $t('cosmwasm.btn_query') }}</button>
+                <button class="join-item btn  btn glass" @click="myContracts()">{{ $t('cosmwasm.btn_query') }}</button>
             </div>
             <div>
                 <select v-model="togo" class="select select-primary" @change="gotoHistory()">
@@ -89,7 +89,7 @@ function gotoHistory() {
             </table>
             <div class="flex justify-between">
                 <PaginationBar :limit="pageRequest.limit" :total="codes.pagination?.total" :callback="pageload" />
-                <label for="wasm_store_code" class="btn btn-primary my-5" @click="dialog.open('wasm_store_code', {})">{{ $t('cosmwasm.btn_up_sc') }}</label>
+                <label for="wasm_store_code" class="btn btn glass my-5" @click="dialog.open('wasm_store_code', {})">{{ $t('cosmwasm.btn_up_sc') }}</label>
             </div>
         </div>
     </div>

@@ -7,15 +7,15 @@
     "coin_type": "118",
     "min_tx_fee": "6000",
     "addr_prefix": "init",
-    "logo": "/logos/INIT-black[1].svg",
-    "theme_color": "#007CB2",
+    "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.svg",
+    "theme_color": "#8e92a1",
     "assets": [{
         "base": "uinit",
         "symbol": "INIT",
         "exponent": "6",
-        "logo": "/logos/INIT-black[1].svg"
+        "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/INIT.svg"
     },{
-        "base": "USDC",
+        "base": "uusdc",
         "symbol": "USDC",
         "exponent": "6",
         "coingecko_id": "USDC", 
@@ -26,5 +26,29 @@
         "exponent": "6",
         "coingecko_id": "", 
         "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/USDC-INIT.svg"
+    },{
+        "base": "move/944f8dd8dc49f96c25fea9849f16436dcfa6d564eec802f3ef7f8b3ea85368ff",
+        "symbol": "GAS",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/GAS.svg"
+    },{
+        "base": "utia",
+        "symbol": "TIA",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "https://raw.githubusercontent.com/cosmos/chain-registry/master/celestia/images/celestia.svg"
+    },{
+        "base": "ibc/276C63284D960E3E4D76AEFC9A8BA338BAD24E30530C7C95E7EFC4D250D4E23D",
+        "symbol": "TUC",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/tucana/images/TUCANA.png"
+    },{
+        "base": "ueth",
+        "symbol": "ETH",
+        "exponent": "6",
+        "coingecko_id": "", 
+        "logo": "https://raw.githubusercontent.com/initia-labs/initia-registry/main/testnets/initia/images/ETH.png"
     }]
 }

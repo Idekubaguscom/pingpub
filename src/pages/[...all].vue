@@ -14,7 +14,7 @@ import misc404 from '@/assets/images/pages/404.png';
 
         <!-- 👉 Image -->
         <div class="misc-avatar w-full text-center">
-            <RouterLink to="/" class="btn no-underline btn-primary mt-4">
+            <RouterLink to="/" class="btn no-underline btn glass mt-4">
                 {{ $t('pages.btn_index') }}
             </RouterLink>
             <img :src="misc404" alt="Coming Soon" class="mx-auto h-[400px] mt-10" />

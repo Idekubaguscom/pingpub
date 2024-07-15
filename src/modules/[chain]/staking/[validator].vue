@@ -256,13 +256,13 @@ function mapDelegators(messages: any[]) {
 </script>
 <template>
   <div>
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded shadow border-indigo-500">
+    <div class="primary px-4 pt-3 pb-4 rounded-md shadow border-indigo-500">
       <div class="flex flex-col lg:!flex-row pt-2 pb-1">
         <div class="flex-1">
           <div class="flex">
-            <div class="avatar mr-4 relative w-24 rounded-lg overflow-hidden">
-              <div class="w-24 rounded-lg absolute opacity-10"></div>
-              <div class="w-24 rounded-lg">
+            <div class="avatar mr-4 relative w-24 rounded-md overflow-hidden">
+              <div class="w-24 rounded-md absolute opacity-10"></div>
+              <div class="w-24 rounded-md">
                 <img
                   v-if="identity && avatars[identity] !== 'undefined'"
                   v-lazy="logo(identity)"
@@ -287,7 +287,7 @@ function mapDelegators(messages: any[]) {
               </div>
               <label
                 for="delegate"
-                class="btn btn-primary btn-sm w-full"
+                class="btn btn glass btn-sm w-full"
                 @click="
                   dialog.open('delegate', {
                     validator_address: v.operator_address,
@@ -362,7 +362,7 @@ function mapDelegators(messages: any[]) {
           <div class="flex flex-col mt-10">
             <div class="flex mb-2">
               <div
-                class="flex items-center justify-center rounded w-10 h-10"
+                class="flex items-center justify-center rounded-md w-10 h-10"
                 style="border: 1px solid #666"
               >
                 <Icon icon="mdi-coin" class="text-3xl" />
@@ -381,7 +381,7 @@ function mapDelegators(messages: any[]) {
             </div>
             <div class="flex mb-2">
               <div
-                class="flex items-center justify-center rounded w-10 h-10"
+                class="flex items-center justify-center rounded-md w-10 h-10"
                 style="border: 1px solid #666"
               >
                 <Icon icon="mdi-percent" class="text-3xl" />
@@ -396,7 +396,7 @@ function mapDelegators(messages: any[]) {
 
             <div class="flex mb-2">
               <div
-                class="flex items-center justify-center rounded w-10 h-10"
+                class="flex items-center justify-center rounded-md w-10 h-10"
                 style="border: 1px solid #666"
               >
                 <Icon icon="mdi-account-tie" class="text-3xl" />
@@ -411,7 +411,7 @@ function mapDelegators(messages: any[]) {
             </div>
             <div class="flex mb-2">
               <div
-                class="flex items-center justify-center rounded w-10 h-10"
+                class="flex items-center justify-center rounded-md w-10 h-10"
                 style="border: 1px solid #666"
               >
                 <Icon icon="mdi-finance" class="text-3xl" />
@@ -424,7 +424,7 @@ function mapDelegators(messages: any[]) {
 
             <div class="flex mb-2">
               <div
-                class="flex items-center justify-center rounded w-10 h-10"
+                class="flex items-center justify-center rounded-md w-10 h-10"
                 style="border: 1px solid #666"
               >
                 <Icon icon="mdi:arrow-down-bold-circle-outline" class="text-3xl" />
@@ -437,7 +437,7 @@ function mapDelegators(messages: any[]) {
 
             <div class="flex mb-2">
               <div
-                class="flex items-center justify-center rounded w-10 h-10"
+                class="flex items-center justify-center rounded-md w-10 h-10"
                 style="border: 1px solid #666"
               >
                 <Icon icon="mdi-clock" class="text-3xl" />
@@ -458,7 +458,7 @@ function mapDelegators(messages: any[]) {
       <div>
         <CommissionRate :commission="v.commission"></CommissionRate>
       </div>
-      <div class="bg-base-100 rounded shadow relative overflow-auto">
+      <div class="primary border border-gray-400 dark:border-gray-400 rounded-md shadow relative overflow-auto">
         <div class="text-lg font-semibold text-main px-4 pt-4">
           {{ $t('staking.commissions_&_rewards') }}
         </div>
@@ -490,7 +490,7 @@ function mapDelegators(messages: any[]) {
           <div class="">
             <label
               for="withdraw_commission"
-              class="btn btn-primary w-full"
+              class="btn btn glass w-full"
               @click="
                 dialog.open('withdraw_commission', {
                   validator_address: v.operator_address,
@@ -501,7 +501,7 @@ function mapDelegators(messages: any[]) {
           </div>
         </div>
       </div>
-      <div class="bg-base-100 rounded shadow overflow-x-auto">
+      <div class="primary border border-gray-400 dark:border-gray-400 rounded-md shadow overflow-x-auto">
         <div class="px-4 pt-4 mb-2 text-main font-lg font-semibold">
           {{ $t('staking.addresses') }}
         </div>
@@ -571,11 +571,11 @@ function mapDelegators(messages: any[]) {
       </div>
     </div>
 
-    <div v-if="delegations.delegation_responses" class="mt-5 bg-base-100 shadow rounded p-4 ">
+    <div v-if="delegations.delegation_responses" class="mt-5 primary border border-gray-400 dark:border-gray-400 shadow rounded-md p-4 ">
       <div class="text-lg mb-4 font-semibold">{{ $t('account.delegations') }}
         <span class="float-right"> {{ delegations.delegation_responses?.length || 0 }} / {{ delegations.pagination?.total || 0 }} </span>
       </div>
-      <div class="rounded overflow-auto">
+      <div class="rounded-md overflow-auto">
         <table class="table validatore-table w-full">
           <thead>
             <th class="text-left pl-4" style="position: relative; z-index: 2">
@@ -599,9 +599,9 @@ function mapDelegators(messages: any[]) {
       </div>
     </div>
 
-    <div class="mt-5 bg-base-100 shadow rounded p-4">
+    <div class="mt-5 primary border border-gray-400 dark:border-gray-400 shadow rounded-md p-4">
       <div class="text-lg mb-4 font-semibold">{{ $t('account.transactions') }}</div>
-      <div class="rounded overflow-auto">
+      <div class="rounded-md overflow-auto">
         <table class="table validatore-table w-full">
           <thead>
             <th class="text-left pl-4" style="position: relative; z-index: 2">
@@ -643,7 +643,7 @@ function mapDelegators(messages: any[]) {
       </div>
     </div>
 
-    <div class="mt-5 bg-base-100 shadow rounded p-4">
+    <div class="mt-5 primary border border-gray-400 dark:border-gray-400 shadow rounded-md p-4">
       <div class="text-lg mb-4 font-semibold">
         <div class="tabs tabs-boxed bg-transparent">
                 
@@ -662,7 +662,7 @@ function mapDelegators(messages: any[]) {
                 >
             </div>
       </div>
-      <div class="rounded overflow-auto">
+      <div class="rounded-md overflow-auto">
         <table class="table validatore-table w-full">
           <thead>
             <th class="text-left pl-4">{{ $t('account.delegator') }}</th>

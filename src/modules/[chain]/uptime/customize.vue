@@ -125,7 +125,7 @@ function color(v: string) {
 <template>
   <div>
     <div class="overflow-x-auto w-full">
-      <div class="lg:!flex lg:!items-center lg:!justify-between bg-base-100 p-5">
+      <div class="lg:!flex lg:!items-center lg:!justify-between primary p-5">
         <div class="min-w-0 flex-1">
           <h2 class="text-2xl font-bold leading-7 sm:!truncate sm:!text-3xl sm:!tracking-tight">{{ $t('uptime.my_validators') }}</h2>
           <div class="mt-1 flex flex-col sm:!mt-0 sm:!flex-row sm:!flex-wrap sm:!space-x-6">
@@ -146,7 +146,7 @@ function color(v: string) {
           
         </div>
       </div>
-      <table class="table table-compact w-full">
+      <table class="table table-compact w-full rounded-md border border-gray-400 dark:border-gray-400">
         <thead>
           <tr>
             <th>{{ $t('uptime.no') }}</th>
@@ -173,30 +173,30 @@ function color(v: string) {
             </td>
             <td class=" capitalize">{{ v.sigingInfo?.tombstoned }}</td>
             <td><span v-if="v.sigingInfo" class="badge " :class="color( v.sigingInfo?.missed_blocks_counter)">{{ v.sigingInfo?.missed_blocks_counter }}</span></td>
-            <td class=""><RouterLink :to="`/${v.chainName}/uptime/#blocks`" class="btn btn-xs btn-primary">{{ $t('module.blocks') }}</RouterLink></td>
+            <td class=""><RouterLink :to="`/${v.chainName}/uptime/#blocks`" class="btn btn-xs btn glass">{{ $t('module.blocks') }}</RouterLink></td>
           </tr>
         </tbody>
       </table>
     </div>
     
     <div class="text-center">
-      <label for="add-validator" class="btn btn-primary mt-5">{{ $t('uptime.add_validators') }}</label>
+      <label for="add-validator" class="btn btn glass mt-5">{{ $t('uptime.add_validators') }}</label>
     </div>
 
     <!-- Put this part before </body> tag -->
     <input type="checkbox" id="add-validator" class="modal-toggle" @change="initial" />
     <div class="modal">
-      <div class="modal-box relative">
+      <div class="modal-box relative glass">
         <label for="add-validator" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
         <h3 class="text-lg font-bold">{{ $t('uptime.add_validators') }}</h3>
-          <div class="form-control my-5 border-2">
+          <div class="form-control my-5">
             <div class="input-group input-group-md">
             <select v-model="selectChain" class="select select-bordered capitalize" @change="changeChain">
               <option v-for="v in dashboard.chains" :value="v.chainName">
                 {{ v.chainName }}
               </option>
             </select>
-              <input v-model="keyword" type="text" class="input w-full" placeholder="keywords to filter validator">
+              <input v-model="keyword" type="text" class="input w-full " placeholder="keywords to filter validator">
             </div>
           </div>
         <div class="py-4 max-h-60 overflow-y-auto">
@@ -214,7 +214,7 @@ function color(v: string) {
           </table>
         </div>
         <div class="modal-action">
-          <label class="btn btn-primary" @click="add">{{ $t('uptime.add') }}</label>
+          <label class="btn btn glass" @click="add">{{ $t('uptime.add') }}</label>
         </div>
       </div>
     </div>

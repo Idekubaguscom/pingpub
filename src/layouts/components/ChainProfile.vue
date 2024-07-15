@@ -15,9 +15,9 @@ function changeEndpoint(item: Endpoint) {
   <div class="dropdown">
     <label tabindex="0" class="flex items-center">
       <div class="p-1 relative mr-3 cursor-pointer">
-        <img v-lazy="chainStore.logo" class="w-9 h-9 rounded-full" />
+        <img v-lazy="chainStore.logo" class="w-9 h-9 rounded-md-full" />
         <div
-          class="w-2 h-2 rounded-full absolute right-0 bottom-0 shadow" :class="{
+          class="w-2 h-2 rounded-md-full absolute right-0 bottom-0 shadow" :class="{
             'bg-success': baseStore.connected,
             'bg-error': !baseStore.connected
           }"
@@ -69,7 +69,7 @@ function changeEndpoint(item: Endpoint) {
             </div>
             <span
               v-if="item.address === chainStore.endpoint?.address"
-              class="bg-yes inline-block h-2 w-2 rounded-full"
+              class="bg-yes inline-block h-2 w-2 rounded-md-full"
             />
           </div>
           <div class="text-gray-400 text-xs whitespace-nowrap">

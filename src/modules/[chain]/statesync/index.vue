@@ -42,9 +42,9 @@ onMounted(() => {
 </script>
 <template>
   <div>
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="primary px-4 pt-3 pb-4 rounded-md mb-4 shadow">
       <h2 class="card-title truncate mb-2">{{ $t('statesync.title') }}</h2>
-      <div class="text-sm">
+      <div class="text-sm ">
         {{ $t('statesync.description') }}
         <a class="text-primary lowercase" href="https://blog.cosmos.network/cosmos-sdk-state-sync-guide-99e4cf43be2f">{{
           $t('statesync.here') }}&nbsp;</a>
@@ -53,7 +53,7 @@ onMounted(() => {
       </div>
     </div>
 
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded mb-4 shadow">
+    <div class="primary px-4 pt-3 pb-4 rounded-md mb-4 shadow">
       <h2 class="card-title truncate mb-2">
         {{ $t('statesync.title_2') }}
       </h2>
@@ -67,7 +67,7 @@ onMounted(() => {
         2. {{ $t('statesync.text_2') }}<br />
         {{ $t('statesync.text_2_1') }}.
         <br /><br />
-        <div class="mockup-code bg-base-200 my-2">
+        <div class="mockup-code primary my-2 border border-gray-400 dark:border-gray-400">
           <pre data-prefix=">"><code class="text-gray-800 dark:invert">[state-sync]</code></pre>
           <pre data-prefix=">"><code class="text-gray-800 dark:invert">enable = true</code></pre>
           <pre data-prefix=">"><code class="text-gray-800"></code></pre>
@@ -80,22 +80,22 @@ onMounted(() => {
         </div>
         <br />
         3. {{ $t('statesync.text_3') }}: <code
-          class="bg-base-200 text-gray-600 px-2 py-px mx-1 rounded shadow">{{ appName }} start</code>
+          class="bg-base-200 text-gray-600 px-2 py-px mx-1 rounded-md shadow">{{ appName }} start</code>
         <br />
         {{ $t('statesync.text_3_1') }}
-        <code class="bg-base-200 text-gray-600 px-2 py-px mx-1 rounded shadow">{{ appName }} unsafe-reset-all</code> or
+        <code class="bg-base-200 text-gray-600 px-2 py-px mx-1 rounded-md shadow">{{ appName }} unsafe-reset-all</code> or
         <code
-          class="bg-base-200 text-gray-600 px-2 py-px mx-1 rounded shadow">{{ appName }} tendermint unsafe-reset-all --home ~/.HOME</code>
+          class="bg-base-200 text-gray-600 px-2 py-px mx-1 rounded-md shadow">{{ appName }} tendermint unsafe-reset-all --home ~/.HOME</code>
         {{ $t('statesync.text_3_2') }}.
       </div>
     </div>
 
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded shadow">
+    <div class="primary px-4 pt-3 pb-4 rounded-md shadow">
       <h2 class="card-title truncate mb-2">{{ $t('statesync.title_3') }}</h2>
       <div class="text-sm">
         {{ $t('statesync.text_title_3') }}
         <br /><br />
-        <div class="mockup-code bg-base-200 my-2">
+        <div class="mockup-code primary my-2 border border-gray-400 dark:border-gray-400">
           <pre data-prefix=">"><code class="text-gray-800 dark:invert">[state-sync]</code></pre>
           <pre
             data-prefix=">"><code class="text-green-400"># snapshot-interval specifies the block interval at which local state sync snapshots are</code></pre>

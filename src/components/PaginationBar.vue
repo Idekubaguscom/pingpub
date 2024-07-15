@@ -22,7 +22,7 @@ const pages = computed(() => {
                 }
             }
             pages.push({
-                color: page === current.value ? 'btn-primary' : '',
+                color: page === current.value ? 'btn glass' : '',
                 page: page,
             })
         }
@@ -41,7 +41,7 @@ function gotoPage(pageNum: number) {
         <div v-if="total && limit" class="btn-group">
             <button v-for="{ page, color } in pages" :key="page"
                 class="btn bg-gray-100 text-gray-500 hover:text-white border-none dark:bg-gray-800 dark:text-white" :class="{
-                    '!btn-primary': color === 'btn-primary',
+                    '!btn glass': color === 'btn glass',
                 }" @click="gotoPage(page)">
                 {{ page }}
             </button>

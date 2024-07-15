@@ -37,7 +37,7 @@ function pageload(p: number) {
 </script>
 <template>
   <div>
-    <div class="bg-base-100 px-4 pt-3 pb-4 rounded shadow">
+    <div class="primary border border-gray-400 dark:border-gray-400 px-4 pt-3 pb-4 rounded-md shadow">
       <div class="flex flex-wrap gap-4  items-center">
         <h2 class="card-title py-4">{{ $t('ibc.title') }}</h2>
         <div class="tabs tabs-boxed">
@@ -55,11 +55,11 @@ function pageload(p: number) {
             <button class="join-item px-2">{{ $t('ibc.connection_id') }}:</button>
             <input v-model="ibcStore.connectionId" type=number class="input input-bordered w-40 join-item" min="0"
               :max="pageResponse.total || 0" :placeholder="`0~${pageResponse.total}`" />
-            <button class="join-item btn  btn-primary" @click="ibcStore.showConnection()">{{ $t('ibc.btn_apply') }}</button>
+            <button class="join-item btn  btn glass" @click="ibcStore.showConnection()">{{ $t('ibc.btn_apply') }}</button>
           </div>
         </div>
       </div>
-      <div class="overflow-auto mt-5">
+      <div class="overflow-auto mt-5 primary border border-gray-400 dark:border-gray-400 rounded-md">
         <router-view :key="$route.fullPath"></router-view>
       </div>
     </div>

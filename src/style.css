@@ -29,8 +29,8 @@ body {
 html.dark,
 html[data-theme='dark'] {
   --text-main: #f7f7f7;
-  --text-secondary: #6f6e84;
-  --bg-active: #242b40;
+  --text-secondary: #aaa9bb;
+  --bg-active: #44403c;
 }
 
 .table th:first-child {
