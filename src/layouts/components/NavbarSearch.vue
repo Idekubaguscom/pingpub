@@ -78,7 +78,7 @@ function confirm() {
       @click="closeSearchModal"
     >
       <div
-        class="relative modal-box cursor-default border border-gray-400 dark:border-gray-400 bg-base-200"
+        class="relative glass modal-box cursor-default border border-gray-400 dark:border-gray-400 bg-base-200"
         @click="(event) => preventClick(event)"
       >
         <!-- header -->

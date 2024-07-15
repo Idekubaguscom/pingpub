@@ -349,7 +349,7 @@ dayjs()
     <div class="xl:!ml-64 px-3 pt-4">
       <!-- header -->
       <div
-        class="flex items-center py-3 primary glass mb-4 rounded-md px-4 sticky top-0 z-10"
+        class="flex items-center shadow py-3 bg-base-200 border border-gray-400 dark:border-gray-400 mb-4 rounded-md px-4 sticky top-0 z-10"
       >
         <div
           class="text-2xl pr-3 cursor-pointer xl:!hidden"

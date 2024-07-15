@@ -1,3 +1,2 @@
 /// <reference types="vite/client" />
-
-declare module '@personaxyz/ad-sdk';
+declare module 'md-editor-v3';

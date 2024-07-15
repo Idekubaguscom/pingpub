@@ -18,7 +18,6 @@ import { computed } from '@vue/reactivity';
 import CardStatisticsVertical from '@/components/CardStatisticsVertical.vue';
 import ProposalListItem from '@/components/ProposalListItem.vue';
 import ArrayObjectElement from '@/components/dynamic/ArrayObjectElement.vue'
-import AdBanner from '@/components/ad/AdBanner.vue';
 
 const props = defineProps(['chain']);
 
@@ -262,9 +261,6 @@ const amount = computed({
         <CardStatisticsVertical v-bind="item" />
       </div>
     </div>
-
-    <AdBanner id="chain-home-banner-ad" unit="banner" width="970px" height="90px" />
-
     <div v-if="blockchain.supportModule('governance')" class="border border-gray-400 dark:border-gray-400 primary rounded-md mt-4 shadow">
       <div class="px-4 pt-4 pb-2 text-lg font-semibold text-main">
         {{ $t('index.active_proposals') }}

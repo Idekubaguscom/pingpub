@@ -12,7 +12,6 @@ import {
   scanCompatibleAccounts,
   type LocalKey,
 } from './utils';
-import AdBanner from '@/components/ad/AdBanner.vue';
 
 const dashboard = useDashboard();
 const chainStore = useBlockchain()
@@ -193,8 +192,8 @@ async function loadBalances(chainName: string, endpoint: string, address: string
 </script>
 <template>
   <div>
-    <div class="overflow-x-auto w-full rounded-md-md">
-      <div class="flex flex-wrap justify-between bg-base-100 p-5">
+    <div class="overflow-x-auto w-full rounded-md primary border border-gray-400">
+      <div class="primary rounded-md flex flex-wrap justify-between p-5">
         <div class="min-w-0">
           <h2 class="text-2xl font-bold leading-7 sm:!truncate sm:!text-3xl sm:!tracking-tight">
             Accounts
@@ -222,10 +221,8 @@ async function loadBalances(chainName: string, endpoint: string, address: string
       </div>
     </div>
 
-    <AdBanner id="account-banner-ad" unit="banner" width="970px" height="90px" />
-
     <div class="overflow-x-auto">
-      <div v-for="{ key, subaccounts } in accounts" class="bg-base-100 rounded-md-md my-5 py-5">
+      <div v-for="{ key, subaccounts } in accounts" class="primary border border-gray-400 rounded-md my-5 py-5">
         <div class="flex justify-self-center">
           <div class="mx-2 p-2">
             <svg :fill="chainStore.current?.themeColor || '#666CFF'" height="28px" width="28px" version="1.1" id="Capa_1"
@@ -307,9 +304,9 @@ async function loadBalances(chainName: string, endpoint: string, address: string
         </div>
       </div>
 
-      <div class=" text-center bg-base-100 rounded-md-md my-4 p-4">
+      <div class=" text-center primary border border-gray-400 rounded-md my-4 p-4">
         <a href="#address-modal"
-          class="inline-flex items-center ml-3 rounded-md-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
+          class="inline-flex items-center ml-3 rounded-md glass bg-white px-3 py-2 text-sm font-semibold text-gray-400 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           <svg class="-ml-0.5 mr-1.5 h-5 w-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
             <path
               d="M12.232 4.232a2.5 2.5 0 013.536 3.536l-1.225 1.224a.75.75 0 001.061 1.06l1.224-1.224a4 4 0 00-5.656-5.656l-3 3a4 4 0 00.225 5.865.75.75 0 00.977-1.138 2.5 2.5 0 01-.142-3.667l3-3z" />
